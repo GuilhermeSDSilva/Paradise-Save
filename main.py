@@ -1,5 +1,5 @@
 import pygame
 from game import *
-
+pygame.init()
 GR = Game_rodas()
-GR.game_loop()
+GR.fase1()
