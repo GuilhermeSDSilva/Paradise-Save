@@ -33,7 +33,9 @@ class Game_rodas:
         plataform2 = plat_m(self)
         plataform3 = plat_m(self)
         plataform4 = plat_m(self)
-
+        plataform5 = plat_m(self)
+        plataform6 = plat_m(self)
+        plataform7 = plat_m(self)
         
         
         while True:
@@ -63,9 +65,13 @@ class Game_rodas:
 
             #desenhar plataformas
             SCREEN.blit(plataform1, (0, 600))
-            SCREEN.blit(plataform1, (100, 500))
-            SCREEN.blit(plataform1, (200, 400))
-            SCREEN.blit(plataform1, (300, 300))
+            SCREEN.blit(plataform2, (100, 500))
+            SCREEN.blit(plataform3, (200, 400))
+            SCREEN.blit(plataform4, (300, 300))
+            SCREEN.blit(plataform5, (500, 300))
+            SCREEN.blit(plataform6, (700, 300))
+            SCREEN.blit(plataform7, (900, 300))
+            
 
             # movimentacão do player
             if (direita is True):
@@ -80,7 +86,7 @@ class Game_rodas:
                 plyaer_y = player_y
 
             # colisão com as plataformas
-            caindo = coli_plat(self, player_x, player_y)
+            caindo = coli_plat_f1(self, player_x, player_y)
 
             # condicão para o pulo
             if(pulo is True) and (pode_pular is True):
@@ -97,9 +103,10 @@ class Game_rodas:
 
             if player_y == ponto_inicial:
                 pode_pular = True
-            
 
-            
-            
+
             pygame.display.flip()
         pygame.quit()
+
+
+    
