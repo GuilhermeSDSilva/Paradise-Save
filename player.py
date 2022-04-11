@@ -36,7 +36,6 @@ def coli_plat_f1(self,play_x,play_y):
     elif(900 < play_x < 1000) and ( 285 < play_y < 288):
         self.cond = False
         return self.cond
-    
     else:
         self.cond = True
         return self.cond
